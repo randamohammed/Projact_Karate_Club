@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A4EDFB3-3A78-4DE6-AB50-6B71BC441080}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KarateClubProjact</RootNamespace>
+    <AssemblyName>KarateClubProjact</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Belt Test\frmShowTestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Belt Test\frmShowTestHistory.Designer.cs">
+      <DependentUpon>frmShowTestHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Belt Test\frmTakeTestfromNextBelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Belt Test\frmTakeTestfromNextBelt.Designer.cs">
+      <DependentUpon>frmTakeTestfromNextBelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsFormat.cs" />
+    <Compile Include="clsGlobal.cs" />
+    <Compile Include="clsUtil.cs" />
+    <Compile Include="clsVildation.cs" />
+    <Compile Include="BeltRanks\frmLastBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeltRanks\frmLastBeltRank.Designer.cs">
+      <DependentUpon>frmLastBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeltRanks\frmEditBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeltRanks\frmEditBeltRank.Designer.cs">
+      <DependentUpon>frmEditBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Belt Test\frmListBeltTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Belt Test\frmListBeltTests.Designer.cs">
+      <DependentUpon>frmListBeltTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\cltrShowInstructorsCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instructors\cltrShowInstructorsCard.Designer.cs">
+      <DependentUpon>cltrShowInstructorsCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\ctrlShowInstructorscardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instructors\ctrlShowInstructorscardWithFilter.Designer.cs">
+      <DependentUpon>ctrlShowInstructorscardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\frmAddUpdateInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructors\frmAddUpdateInstructors.Designer.cs">
+      <DependentUpon>frmAddUpdateInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\frmLastInteructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructors\frmLastInteructor.Designer.cs">
+      <DependentUpon>frmLastInteructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\frmShowinstructorsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructors\frmShowinstructorsInfo.Designer.cs">
+      <DependentUpon>frmShowinstructorsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructors\frmShowTrainedMemberbyInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructors\frmShowTrainedMemberbyInstructor.Designer.cs">
+      <DependentUpon>frmShowTrainedMemberbyInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member Instructor\frmAddUpdateMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Instructor\frmAddUpdateMemberInstructor.Designer.cs">
+      <DependentUpon>frmAddUpdateMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member Instructor\frmLastMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Instructor\frmLastMemberInstructor.Designer.cs">
+      <DependentUpon>frmLastMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ctrlMemberinfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Members\ctrlMemberinfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlMemberinfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ctrlShowMemberInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Members\ctrlShowMemberInfo.Designer.cs">
+      <DependentUpon>ctrlShowMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmAddUpdatMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmAddUpdatMembers.Designer.cs">
+      <DependentUpon>frmAddUpdatMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmFindMemberInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Members\frmFindMemberInfo.Designer.cs">
+      <DependentUpon>frmFindMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmLastMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmLastMember.Designer.cs">
+      <DependentUpon>frmLastMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmMemberDetiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemberDetiles.Designer.cs">
+      <DependentUpon>frmMemberDetiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmPaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmPaymentHistory.Designer.cs">
+      <DependentUpon>frmPaymentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddNewPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddNewPeople.Designer.cs">
+      <DependentUpon>frmAddNewPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Cantrols\AddOrUpdatePeople.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Cantrols\AddOrUpdatePeople.Designer.cs">
+      <DependentUpon>AddOrUpdatePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription Periods\frmAddUpdateSubscriptionPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription Periods\frmAddUpdateSubscriptionPeriods.Designer.cs">
+      <DependentUpon>frmAddUpdateSubscriptionPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription Periods\frmListSubscriptionPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription Periods\frmListSubscriptionPeriods.Designer.cs">
+      <DependentUpon>frmListSubscriptionPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AddOrUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\AddOrUpdateUser.Designer.cs">
+      <DependentUpon>AddOrUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ChenagePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ChenagePassword.Designer.cs">
+      <DependentUpon>ChenagePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Countrols\CtrlPersonCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Countrols\CtrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>CtrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FormSetPremissons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FormSetPremissons.Designer.cs">
+      <DependentUpon>FormSetPremissons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\ManagePeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\ManagePeople.Designer.cs">
+      <DependentUpon>ManagePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowItemsInSysetem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowItemsInSysetem.Designer.cs">
+      <DependentUpon>ShowItemsInSysetem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\ShowPeopleDetils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\ShowPeopleDetils.Designer.cs">
+      <DependentUpon>ShowPeopleDetils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Cantrols\ShowPeopleInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Cantrols\ShowPeopleInfo.Designer.cs">
+      <DependentUpon>ShowPeopleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ShowUserDetilesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ShowUserDetilesInfo.Designer.cs">
+      <DependentUpon>ShowUserDetilesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Countrols\ShowUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Countrols\ShowUserInfo.Designer.cs">
+      <DependentUpon>ShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Belt Test\frmShowTestHistory.resx">
+      <DependentUpon>frmShowTestHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Belt Test\frmTakeTestfromNextBelt.resx">
+      <DependentUpon>frmTakeTestfromNextBelt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeltRanks\frmLastBeltRank.resx">
+      <DependentUpon>frmLastBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeltRanks\frmEditBeltRank.resx">
+      <DependentUpon>frmEditBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Belt Test\frmListBeltTests.resx">
+      <DependentUpon>frmListBeltTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\cltrShowInstructorsCard.resx">
+      <DependentUpon>cltrShowInstructorsCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\ctrlShowInstructorscardWithFilter.resx">
+      <DependentUpon>ctrlShowInstructorscardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\frmAddUpdateInstructors.resx">
+      <DependentUpon>frmAddUpdateInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\frmLastInteructor.resx">
+      <DependentUpon>frmLastInteructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\frmShowinstructorsInfo.resx">
+      <DependentUpon>frmShowinstructorsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructors\frmShowTrainedMemberbyInstructor.resx">
+      <DependentUpon>frmShowTrainedMemberbyInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Instructor\frmAddUpdateMemberInstructor.resx">
+      <DependentUpon>frmAddUpdateMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Instructor\frmLastMemberInstructor.resx">
+      <DependentUpon>frmLastMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\ctrlMemberinfoWithFilter.resx">
+      <DependentUpon>ctrlMemberinfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\ctrlShowMemberInfo.resx">
+      <DependentUpon>ctrlShowMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmAddUpdatMembers.resx">
+      <DependentUpon>frmAddUpdatMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmFindMemberInfo.resx">
+      <DependentUpon>frmFindMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmLastMember.resx">
+      <DependentUpon>frmLastMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmMemberDetiles.resx">
+      <DependentUpon>frmMemberDetiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmPaymentHistory.resx">
+      <DependentUpon>frmPaymentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddNewPeople.resx">
+      <DependentUpon>frmAddNewPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Cantrols\AddOrUpdatePeople.resx">
+      <DependentUpon>AddOrUpdatePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription Periods\frmAddUpdateSubscriptionPeriods.resx">
+      <DependentUpon>frmAddUpdateSubscriptionPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription Periods\frmListSubscriptionPeriods.resx">
+      <DependentUpon>frmListSubscriptionPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\AddOrUpdateUser.resx">
+      <DependentUpon>AddOrUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ChenagePassword.resx">
+      <DependentUpon>ChenagePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Countrols\CtrlPersonCardWithFilter.resx">
+      <DependentUpon>CtrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FormSetPremissons.resx">
+      <DependentUpon>FormSetPremissons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ManagePeople.resx">
+      <DependentUpon>ManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShowItemsInSysetem.resx">
+      <DependentUpon>ShowItemsInSysetem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ShowPeopleDetils.resx">
+      <DependentUpon>ShowPeopleDetils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Cantrols\ShowPeopleInfo.resx">
+      <DependentUpon>ShowPeopleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ShowUserDetilesInfo.resx">
+      <DependentUpon>ShowUserDetilesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Countrols\ShowUserInfo.resx">
+      <DependentUpon>ShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geography - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flight_attendant_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32 - 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeBlack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\judo %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberLast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\judo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBussniss\clsBussinsKarateClubProjacjat.csproj">
+      <Project>{70dfda66-38e7-49b6-ad8d-bef8019d9c73}</Project>
+      <Name>clsBussinsKarateClubProjacjat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تنزيل %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\judo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Type 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PassedTests 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karatee1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SharaKarate.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invite_friends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestType 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-access %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-page1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-access %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kung-fu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drivers 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Out 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage People1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddAppointment 32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
