@@ -29,4 +29,4 @@ By default, the connection string is located here:
 `DataAccsess\clsConnintionKarate.cs`
 
 ```csharp
-public static string ConntionSring = $"Server =.;Database = KarateClub;User Id = sa;Password = 123456";
+public static string ConntionSring = $"Server =.;Database = KarateClub;User Id = yourid;Password = yourpassword";
